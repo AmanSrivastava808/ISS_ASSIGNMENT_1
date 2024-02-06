@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Details Webpage</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+          function darkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+        const icon = document.getElementById('mode-icon');
+        // Toggle between moon and sun icons
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+      }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      </head>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="education" style="font-size: 25px;">
+        <h1 style="font-size: 35px;">City Montessori Inter College, Gomti Nagar</h1>
+        <h2 style="font-size: 25px;">High School | Graduated in 2022 | Affiliated with CISCE</h2>
+        <p style="font-size: 15px;">Completed Elementary, Middle and High School from CMS. Graduated with a percentage of 97.5.</p>
+        <h1 style="font-size: 35px;">LNM Institute of Information Technology, Jaipur</h1>
+        <h2 style="font-size: 25px;">Bachelor of Technology in Computer Science Engineering(Dropped out) | Joined in 2022 | Left in 2023</h2>
+        <p style="font-size: 15px;">Pursued Btech in CSE from LNMIIT before dropping out a year into the programme to join IIIT-H.</p>
+        <h1 style="font-size: 35px;">International Institute of Information Technology, Hyderabad</h1>
+        <h2 style="font-size: 25px;">Bachelor of Technology in Computer Science Engineering, Master of Science in Computer Science Engineering(Ongoing) | Joined in 2023 | Graduating in 2028</h2>
+        <p style="font-size: 15px;">Currently pursuing Dual Degree in Computer Science Engineering from IIIT-H. In my 1st year of the programme.</p>
+    </section>
+    <button id="dark-mode-toggle" style="background-color:aquamarine;border: none;color: black;font-weight: bold;font-family: 'Montserrat';padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px; cursor:pointer; border-radius:8px;" onclick="darkMode()">
+        <i id="mode-icon" class="fas fa-sun"></i>Dark-Mode(On/Off)</button>
+    <footer>
+        <div class="footer-links">
+          <a href="https://github.com/AmanSrivastava808" target="_blank" style="text-decoration: none;"><i class="fab fa-github"></i>Github</a>
+          <a href="mailto:aman.srivastava@research.iiit.ac.in" style="text-decoration: none;"><i class="fas fa-envelope"></i>Email</a>
+          <a href="https://www.instagram.com/amansrivastava127" target="_blank" style="text-decoration: none;"><i class="fab fa-instagram"></i>Instagram</a>
+        </div>
+    </footer>
+  </body>
+</html>

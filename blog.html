@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Details Webpage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function darkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      const icon = document.getElementById('mode-icon');
+      // Toggle between moon and sun icons
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="blog" style="font-size: 25px;">
+  <article id="blog1">
+    <h2><a href="blog1.html" target="_blank" style="text-decoration: none;">Blog 1: Navigating the World of Studies</a></h2>
+    <p style="font-size: 20px;">Embarking on the educational journey demands effective study habits. Establish clear goals, create a study schedule, 
+    and engage in active learning techniques to maximize academic potential. Find a conducive study environment, take regular breaks, 
+    and utilize mnemonic devices for better retention. Stay consistent and positive, celebrating achievements and seeing setbacks as opportunities for growth. 
+    With dedication and perseverance, success in studies is within reach.</p>
+    <div class="interaction-section">
+      <!-- <button onclick="likeBlog('blog1')">Like</button> -->
+      <p style="font-size: 15px;">Number of Likes: <span id="likeCount_blog1" style="display:inline">0</span></p>
+       <div id="comments_blog1">
+        <textarea placeholder="Leave a comment..." rows="4" cols="50"></textarea>
+      </div> 
+    </div>
+  </article>
+  <article id="blog2">
+    <h2><a href="blog2.html" target="_blank" style="text-decoration: none;">Blog 2: Exploring the World of Sports</a></h2>
+    <p style="font-size: 20px;">Participating in sports offers numerous psychological benefits. 
+      Beyond physical activity, sports reduce stress by triggering the release of endorphins. They boost self-esteem through achievement and recognition, 
+      fostering mental resilience by teaching perseverance and determination. 
+      Sports also provide social connections and support, enhancing overall well-being and quality of life.</p>
+    <!-- <p>Likes:<span id="likeCount"></span></p> -->
+    <div class="interaction-section">
+      <!-- <button onclick="likeBlog('blog2')">Like</button> -->
+      <p style="font-size: 15px;">Number of Likes: <span id="likeCount_blog2" style="display:inline;">0</span></p>
+      <div id="comments_blog2">
+        <textarea placeholder="Leave a comment..." rows="4" cols="50"></textarea>
+      </div> 
+    </div>
+  </article> 
+</section>
+<button id="dark-mode-toggle" style="background-color:aquamarine;border: none;color: black;font-weight: bold;font-family: 'Montserrat';padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px; cursor:pointer; border-radius:8px;" onclick="darkMode()">
+  <i id="mode-icon" class="fas fa-sun"></i>Dark-Mode(On/Off)</button>
+<footer>
+  <div class="footer-links">
+    <a href="https://github.com/AmanSrivastava808" target="_blank" style="text-decoration: none;"><i class="fab fa-github"></i>Github</a>
+    <a href="mailto:aman.srivastava@research.iiit.ac.in" style="text-decoration: none;"><i class="fas fa-envelope"></i>Email</a>
+    <a href="https://www.instagram.com/amansrivastava127" target="_blank" style="text-decoration: none;"><i class="fab fa-instagram"></i>Instagram</a>
+  </div>
+</footer>
+<script>
+  // Function to handle blog likes using local storage
+  function likeBlog(blogId) {
+    const likeCountElement = document.getElementById(`likeCount_${blogId}`);
+    let likeCount = parseInt(localStorage.getItem(`${blogId}_likes`) || 0);
+
+    // Check if the user has already liked this blog
+    const hasLiked = localStorage.getItem(`${blogId}_userLiked`);
+    if (!hasLiked) {
+      likeCount++;
+      localStorage.setItem(`${blogId}_likes`, likeCount);
+      localStorage.setItem(`${blogId}_userLiked`, true);
+      likeCountElement.textContent = likeCount;
+    } else {
+      alert("You can only like once.");
+    }
+  }
+
+  // Retrieve and display like counts on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    const likeCount_blog1 = parseInt(localStorage.getItem("blog1_likes") || 0);
+    const likeCount_blog2 = parseInt(localStorage.getItem("blog2_likes") || 0);
+
+    document.getElementById("likeCount_blog1").textContent = likeCount_blog1;
+    document.getElementById("likeCount_blog2").textContent = likeCount_blog2;
+  });
+</script>
+</body>
+</html>

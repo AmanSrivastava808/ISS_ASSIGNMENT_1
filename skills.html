@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Details Webpage</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+          function darkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+        const icon = document.getElementById('mode-icon');
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+      }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      </head>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="skills" style="font-size: 25px;">
+        <h1 style="font-size: 50px;">Technical Skills</h1>
+    <p>I possess a diverse skill set with proficiency in various programming languages and a keen interest in different domains. With expertise in HTML, CSS, and JavaScript, I specialize in crafting dynamic and visually appealing web experiences.
+        Furthermore, I have a solid foundation in C, C++, and Java, 
+        allowing me to tackle complex algorithmic challenges and develop robust software solutions.</p>
+    <h1 style="font-size: 50px;">Soft Skills</h1>
+    <p>Beyond programming, I am an enthusiastic participant in trivia competitions, leveraging my broad knowledge base. I also enjoy delving into literature on geography and geopolitics, further enriching my understanding of global dynamics and cultures. With a passion for continuous learning and exploration, 
+        I am poised to contribute effectively to diverse projects and environments.</p>
+    </section>
+    <button id="dark-mode-toggle" style="background-color:aquamarine;border: none;color: black;font-weight: bold;font-family: 'Montserrat';padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px; cursor:pointer; border-radius:8px;" onclick="darkMode()">
+        <i id="mode-icon" class="fas fa-sun"></i>Dark-Mode(On/Off)</button>
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/AmanSrivastava808" target="_blank" style="text-decoration: none;"><i class="fab fa-github"></i>Github</a>
+            <a href="mailto:aman.srivastava@research.iiit.ac.in" style="text-decoration: none;"><i class="fas fa-envelope"></i>Email</a>
+            <a href="https://www.instagram.com/amansrivastava127" target="_blank" style="text-decoration: none;"><i class="fab fa-instagram"></i>Instagram</a>
+        </div>
+    </footer>
+  </body>
+</html>
